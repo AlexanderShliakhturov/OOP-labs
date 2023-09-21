@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alexander/labsoop/lab1/lab1.cpp
+iostream
+-
+utility
+-
+math.h
+-
+lab1.h
+/home/alexander/labsoop/lab1/lab1.h
+
+/home/alexander/labsoop/lab1/lab1.h
+utility
+-
+string
+-
+
+/home/alexander/labsoop/lab1/task.cpp
+iostream
+-
+utility
+-
+lab1.h
+/home/alexander/labsoop/lab1/lab1.h
+
