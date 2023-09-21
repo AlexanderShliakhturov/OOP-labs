@@ -6,37 +6,56 @@
 
 TEST(test_01, basic_test_10)
 {
-    std::pair<int, int> result = closest_pair_tonum(10);
+    // Arrange:
+    int n = 10;
+    // Act:
+    std::pair<int, int> result = closest_pair_tonum(n);
+    // Assert:
     ASSERT_TRUE(result == std::make_pair(5, 4));
 }
 
 TEST(test_02, basic_test_50)
 {
-    std::pair<int, int> result = closest_pair_tonum(50);
+    int n = 50;
+
+    std::pair<int, int> result = closest_pair_tonum(n);
+
     ASSERT_TRUE(result == std::make_pair(45, 36));
 }
 
 TEST(test_03, basic_test_30)
 {
-    std::pair<int, int> result = closest_pair_tonum(30);
+    int n = 30;
+
+    std::pair<int, int> result = closest_pair_tonum(n);
+
     ASSERT_TRUE(result == std::make_pair(29, 20));
 }
 
 TEST(test_04, with_no_answer)
 {
-    std::pair<int, int> result = closest_pair_tonum(4);
+    int n = 4;
+
+    std::pair<int, int> result = closest_pair_tonum(n);
+    
     ASSERT_TRUE(result == std::make_pair(0, 0));
 }
 
 TEST(test_05, zero)
 {
-    std::pair<int, int> result = closest_pair_tonum(0);
+    int n = 0;
+
+    std::pair<int, int> result = closest_pair_tonum(n);
+
     ASSERT_TRUE(result == std::make_pair(0, 0));
 }
 
 TEST(test_06, below_zero)
 {
-    std::pair<int, int> result = closest_pair_tonum(-999);
+    int n = -999;
+
+    std::pair<int, int> result = closest_pair_tonum(n);
+    
     ASSERT_TRUE(result == std::make_pair(0, 0));
 }
 
