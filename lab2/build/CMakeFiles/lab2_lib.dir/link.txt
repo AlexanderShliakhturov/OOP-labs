@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblab2_lib.a  CMakeFiles/lab2_lib.dir/src/DynamicArray.cpp.o CMakeFiles/lab2_lib.dir/src/Octal.cpp.o CMakeFiles/lab2_lib.dir/src/functions.cpp.o CMakeFiles/lab2_lib.dir/src/main_func.cpp.o
-/usr/bin/ranlib liblab2_lib.a
