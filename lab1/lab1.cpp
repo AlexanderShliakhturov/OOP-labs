@@ -12,7 +12,8 @@ std::pair<int, int> closest_pair_tonum(int n)
         for (int j = n - 1; j > 0; j--)
         {
             bool is_sum_square = sqrt(i + j) == int(sqrt(i + j));
-            bool is_diff_square = (sqrt(i - j) == int(sqrt(i - j)));
+            bool is_diff_square = (sqrt(i - j) == int(sqrt(i - j))); 
+            
             bool is_finded = i > j 
                 && is_sum_square 
                 && is_diff_square 
