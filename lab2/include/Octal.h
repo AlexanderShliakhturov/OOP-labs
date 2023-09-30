@@ -1,0 +1,22 @@
+#ifndef OCTAL_H
+#define OCTAL_H
+
+#include "DynamicArray.h"
+#include <string>
+#include <stdexcept>
+
+class Octal
+{
+public:
+    DynamicArray Array_value;
+    Octal(const std::string &mass);
+    void show();
+    std::string to_string();
+    Octal sum(Octal num);
+    Octal diff(Octal num);
+    std::string less_than(Octal num);
+    std::string more_than(Octal num);
+    std::string equal(Octal num);
+};
+
+#endif
