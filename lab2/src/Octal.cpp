@@ -43,7 +43,9 @@ Octal Octal::sum(Octal num)
     std::string str(len, '0');
     Octal res_reverse(str);
     Octal res(str);
+
     do_equal_length(this->Array_value, num.Array_value);
+
     int carry = 0;
     for (int i = 0; i < len - 1; i++)
     {
@@ -52,6 +54,7 @@ Octal Octal::sum(Octal num)
         carry = sum / 8;
     }
     res_reverse.Array_value[len - 1] = static_cast<unsigned char>(carry + '0');
+    
     for (int i = 0; i < res_reverse.Array_value.get_size(); i++)
     {
         res.Array_value[i] = res_reverse.Array_value[res_reverse.Array_value.get_size() - 1 - i];
@@ -102,14 +105,11 @@ Octal Octal::diff(Octal num)
 
 std::string Octal::less_than(Octal num)
 {
-    if (this->equal(num) == "TRUE")
+    if (this->equal(num) == "TRUE" || this->more_than(num) == "TRUE")
     {
         return "FALSE";
     }
-    if (this->more_than(num) == "TRUE")
-    {
-        return "FALSE";
-    }
+
     return "TRUE";
 }
 std::string Octal::more_than(Octal num)
