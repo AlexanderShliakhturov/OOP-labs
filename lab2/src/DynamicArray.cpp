@@ -44,7 +44,7 @@ DynamicArray::DynamicArray(const DynamicArray &other) : data(nullptr), size(othe
 
 DynamicArray::~DynamicArray()
 {
-    // delete[] data;
+    
 }
 
 void DynamicArray::push_front(unsigned char value)

@@ -21,7 +21,7 @@ Octal::Octal(const std::string &mass)
 }
 void Octal::show()
 {
-    for (int i = 0; i < this->Array_value.get_size(); i++)
+    for (int i = this->Array_value.get_size() - 1; i > 0; i--)
     {
         std::cout << this->Array_value[i];
     }

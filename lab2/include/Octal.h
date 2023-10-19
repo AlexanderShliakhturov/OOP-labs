@@ -7,8 +7,10 @@
 
 class Octal
 {
-public:
+private:
     DynamicArray Array_value;
+public:
+    //
     Octal(const std::string &mass);
     void show();
     std::string to_string();

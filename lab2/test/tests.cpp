@@ -7,137 +7,137 @@
 #include "Octal.h"
 #include "main_func.h"
 
-//7467 - 756 = 6511
 
-TEST(test_01, diff_throw_dights)
+
+TEST(diff_t_s, diff_throw_dights)
 {
-    // Arrange:
+
     std::string first = "7467";
     std::string second = "756";
     char operand = '-';
-    // Act:
+
     Octal result = main_func(first, operand, second);
-    // Assert:
+
     ASSERT_TRUE(result.to_string() == Octal("6511").to_string());
 }
 
-TEST(test_01, equa_minus_equal)
+TEST(diff_t_s, equa_minus_equal)
 {
-    // Arrange:
+    
     std::string first = "7777";
     std::string second = "7777";
     char operand = '-';
-    // Act:
+    
     Octal result = main_func(first, operand, second);
-    // Assert:
+   
     ASSERT_TRUE(result.to_string() == Octal("0000").to_string());
 }
 
-TEST(test_01, zero_minus_zero)
+TEST(diff_t_s, zero_minus_zero)
 {
-    // Arrange:
+    
     std::string first = "0";
     std::string second = "0";
     char operand = '-';
-    // Act:
+    
     Octal result = main_func(first, operand, second);
-    // Assert:
+    
     ASSERT_TRUE(result.to_string() == Octal("0").to_string());
 }
 
-TEST(test_01, zero_plus_zero)
+TEST(plus_t_s, zero_plus_zero)
 {
-    // Arrange:
+    
     std::string first = "0";
     std::string second = "0";
     char operand = '+';
-    // Act:
+    
     Octal result = main_func(first, operand, second);
-    // Assert:
+    
     ASSERT_TRUE(result.to_string() == Octal("0").to_string());
 }
 
-TEST(test_01, sum_throw_dight)
+TEST(plus_t_s, sum_throw_dight)
 {
-    // Arrange:
+   
     std::string first = "7777";
     std::string second = "77";
     char operand = '+';
-    // Act:
+   
     Octal result = main_func(first, operand, second);
-    // Assert:
+    
     ASSERT_TRUE(result.to_string() == Octal("10076").to_string());
 }
 
-TEST(test_01, easy_sum)
+TEST(plus_t_s, easy_sum)
 {
-    // Arrange:
+    
     std::string first = "123";
     std::string second = "123";
     char operand = '+';
-    // Act:
+    
     Octal result = main_func(first, operand, second);
-    // Assert:
+    
     ASSERT_TRUE(result.to_string() == Octal("246").to_string());
 }
 
-TEST(test_01, more_more_than_less)
+TEST(more_t_s, more_more_than_less)
 {
-    // Arrange:
+    
     std::string first = "777";
     std::string second = "7";
     char operand = '>';
-    // Act:
+    
     std::string result = Octal(first).more_than(Octal(second));
-    // Assert:
+    
     ASSERT_TRUE(result == "TRUE");
 }
 
-TEST(test_01, more_less_than_less)
+TEST(more_t_s, more_less_than_less)
 {
-    // Arrange:
+    
     std::string first = "777";
     std::string second = "7";
     char operand = '<';
-    // Act:
+    
     std::string result = Octal(first).less_than(Octal(second));
-    // Assert:
+   
     ASSERT_TRUE(result == "FALSE");
 }
 
-TEST(test_01, zer0_equal_zero)
+TEST(eq_t_s, zer0_equal_zero)
 {
-    // Arrange:
+    
     std::string first = "0";
     std::string second = "0";
     char operand = '=';
-    // Act:
+    
     std::string result = Octal(first).equal(Octal(second));
-    // Assert:
+    
     ASSERT_TRUE(result == "TRUE");
 }
 
-TEST(test_01, zero_more_than_zero)
+TEST(more_t_s, zero_more_than_zero)
 {
-    // Arrange:
+    
     std::string first = "0";
     std::string second = "0";
     char operand = '>';
-    // Act:
+    
     std::string result = Octal(first).more_than(Octal(second));
-    // Assert:
+   
     ASSERT_TRUE(result == "FALSE");
 }
 
-TEST(test_01, zero_less_than_zero)
+TEST(less_t_s, zero_less_than_zero)
 {
-    // Arrange:
+    
     std::string first = "0";
     std::string second = "0";
     char operand = '<';
-    // Act:
+   
     std::string result = Octal(first).less_than(Octal(second));
-    // Assert:
+  
     ASSERT_TRUE(result == "FALSE");
 }
 
